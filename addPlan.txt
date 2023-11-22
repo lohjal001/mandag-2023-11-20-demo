@@ -1,0 +1,23 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+class AddPlanButton extends JButton {
+    private String day;
+
+    public AddPlanButton(String day) {
+        super("Add Plan");
+        this.day = day;
+
+        addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Implement the logic to add plans for the corresponding day
+                String plan = JOptionPane.showInputDialog("Enter your plan for " + day + ":");
+                if (plan != null && !plan.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Plan added for " + day + ": " + plan);
+                }
+            }
+        });
+    }
+}

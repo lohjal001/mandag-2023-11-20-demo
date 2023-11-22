@@ -1,0 +1,26 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+class Weekday extends JFrame{
+
+
+
+// Days of the week
+        String[] daysOfWeek = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+
+                // Create panels for each day and add them to the frame
+                for (String day : daysOfWeek) {
+                JPanel dayPanel = new JPanel();
+                JLabel dayLabel = new JLabel(day);
+                JButton addPlan = new JButton("Add Plan");
+
+                // Add components to the panel
+                dayPanel.add(dayLabel);
+                dayPanel.add(addPlan);
+
+                // Add the panel to the frame
+                add(dayPanel);
+                }
+
+}
